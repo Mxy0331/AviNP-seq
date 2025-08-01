@@ -1,0 +1,44 @@
+new
+snapshotDirectory /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/IGV
+
+genome /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Reference/P1940.fasta
+clear
+load /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Visualization/P1940.sorted.bam
+colorBy READ_STRAND
+squish
+maxPanelHeight 800
+snapshot P1940.sorted_by_strand.png
+
+genome /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Reference/P2339.fasta
+clear
+load /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Visualization/P2339.sorted.bam
+colorBy READ_STRAND
+squish
+maxPanelHeight 800
+snapshot P2339.sorted_by_strand.png
+
+genome /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Reference/P2340.fasta
+clear
+load /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Visualization/P2340.sorted.bam
+colorBy READ_STRAND
+squish
+maxPanelHeight 800
+snapshot P2340.sorted_by_strand.png
+
+genome /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Reference/P2341.fasta
+clear
+load /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Visualization/P2341.sorted.bam
+colorBy READ_STRAND
+squish
+maxPanelHeight 800
+snapshot P2341.sorted_by_strand.png
+
+genome /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Reference/P2345.fasta
+clear
+load /mnt/d/xuyan/xiaoyu/GH-AAV/完整性测试/Visualization/P2345.sorted.bam
+colorBy READ_STRAND
+squish
+maxPanelHeight 800
+snapshot P2345.sorted_by_strand.png
+
+exit
