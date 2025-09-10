@@ -370,7 +370,7 @@ def write_sorted_output(merged_alignments, output_file, vector_ref_lengths, back
     print(f"已将排序和格式化后的比对结果写入 {output_file}。")
 
 
-def filter_reads_by_vector_num(vector_alignments, vector_ref_lengths, coverage_threshold=0.9, vec_num=1):
+def filter_reads_by_vector_num(vector_alignments, vector_ref_lengths, coverage_threshold=0.95, vec_num=1):
     """
     筛选出包含指定数量（vec_num）完整Vector匹配的序列。
     完整Vector匹配定义为覆盖率≥coverage_threshold。
@@ -790,7 +790,7 @@ def write_fasta_from_yaml(ref_yaml, output_dir='references'):
         print(f"已从 YAML 文件写入 {ref_type} 到 {fasta_path}。")
     return fasta_files
 
-def get_reads_matched_to_vector(vector_alignments, vector_ref_lengths, coverage_threshold=0.9):
+def get_reads_matched_to_vector(vector_alignments, vector_ref_lengths, coverage_threshold=0.95):
     """
     获取所有完全匹配上vector的reads。
     只筛选那些覆盖率达到给定阈值的reads。
@@ -875,8 +875,8 @@ def parse_arguments():
     parser.add_argument('-fq', '--fastq_file', required=True, help='输入的FastQ文件')
     parser.add_argument('-o', '--output', default='alignment_results.tsv', help='输出比对结果文件')
     parser.add_argument("-d", "--output_dir", default='plot', help="输出文件的文件夹路径")
-    parser.add_argument('-c', '--coverage_threshold', type=float, default=0.9,
-                        help='Vector匹配的最小覆盖率阈值（默认0.9，即90%）')
+    parser.add_argument('-c', '--coverage_threshold', type=float, default=0.95,
+                        help='Vector匹配的最小覆盖率阈值')
     parser.add_argument('-p', '--proximity', type=int, default=15, help='合并ITR比对区间时的最大间隔（默认10碱基）')
     # 新增以下两个参数
     parser.add_argument('--itr_flipflop', required=True, help='ITR构型参考序列FASTA文件')
